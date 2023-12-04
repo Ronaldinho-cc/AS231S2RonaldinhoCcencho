@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="title">Bienvenidos</h1>
+            <img src="img/Logo-VG_Tpt02.png" alt="">
+
+            <div class="options">
+                <form action="/validar" onsubmit="return validarCorreo()" method="post" autocomplete="off"> <!--Llamamos a la funcion y desactivamos para que no nos muestre opciones-->
+                <label >
+                    <input type="radio" required> Analisis de sistemas
+                </label>
+                <label>
+                    <input type="radio" required> Produccion Agraria
+                </label>
+            </div>
+            <div class="questions">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Nombres" name="nombre" required > <br>
+                    <label for="apellido">Apellido </label>
+                    <input type="text" id="apellido" placeholder="Apellidos" name="apellido"  required > <br>
+                    <label for="dni">N° Dni </label>
+                    <input type="text" id="dni" placeholder="N° Dni" name="dni"  pattern="[0-9]{8}" required> <br>
+                    <label for="fecha">Fecha Nacimiento</label>
+                    <input type="date" id="nacimiento" name="nacimiento" required placeholder="Fecha de Nacimiento">
+                    <label for="correo">Correo Electronico</label>
+                    <input type="email" id="correo" placeholder="correo" name="correo" required> <br>
+                    <label for="password">Contraseña</label>
+                    <input type="password" required id="password" name="password" placeholder="contraseña" required> <br>
+                <a href="#">¿olvido su contraseña?</a>                
+                <br>
+                <br>
+                <label>     
+                    <input type="checkbox"> Aceptar la politica de privacidad de los Terminos y condiciones 
+                </label> <br>
+                <input type="submit"  value="REGISTRARME">
+            </div>
+        </form>
+        </div>
+    </div>
+    <script>
+        function validarCorreo() {
+            var correo = document.getElementById("correo").value;
+            if (correo.includes("%")) {
+                alert("Por favor, utiliza el símbolo '@' en lugar de '%'.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body {
+  background-image: url('/form/img/2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  
+  justify-content: center;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+}
+
+.questions input {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  border-color: white;
+  font-size: 17px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+input[type="submit"] {
+  background-color: red;
+  color: white;
+}
