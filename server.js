@@ -67,7 +67,7 @@ app.post("/validar", (req, res)=>{
           throw error;
         } else {
           console.log("Datos almacenados correctamente")
-          console.log(registro);
+          console.log(req.body);
         }
       });
 });
