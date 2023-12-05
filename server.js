@@ -71,7 +71,7 @@ app.post("/validar", (req, res)=>{
         }
       });
 });
-
+//commit 
 // login 
 app.post('/auth', function(request, response) {
 	// Capture the input fields
