@@ -23,9 +23,9 @@
                     </div>
                     <div class="questions">
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" placeholder="Nombres" name="nombre" required> <br>
+                        <input type="text" id="nombre" placeholder="Nombres" name="nombre"  pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"   required> <br>
                         <label for="apellido">Apellido </label>
-                        <input type="text" id="apellido" placeholder="Apellidos" name="apellido" required> <br>
+                        <input type="text" id="apellido" placeholder="Apellidos" name="apellido"  pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"   required> <br>
                         <label for="dni">N° Dni </label>
                         <input type="text" id="dni" placeholder="N° Dni" name="dni" pattern="[0-9]{8}" required> <br>
                         <label for="nacimiento">Fecha Nacimiento</label>

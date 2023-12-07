@@ -7,9 +7,9 @@ const path = require('path');
 
 let conexion = mysql.createConnection({
     host: 'localhost',
-    user : 'root',
+    user : 'ronaldinho',
     database :'demo',
-    password:'admin',
+    password:'ronal2023',
 });
 
 
@@ -40,10 +40,18 @@ app.get("/index.html",function(req,res){
     res.sendFile(filePath); 
 });
 
+app.get("/pagina.html",function(req,res){ 
+    var filePath = path.join(__dirname, '/form/pagina.html');
+    res.sendFile(filePath); 
+});
+
+
 app.get("/sesion.html",function(req,res){ 
     var filePath = path.join(__dirname, '/form/sesion.html');
     res.sendFile(filePath);
 });
+
+
 
 app.post("/validar", (req, res)=>{
     let data= req.body;
@@ -62,6 +70,7 @@ app.post("/validar", (req, res)=>{
         if (error) {
           throw error;
         } else {
+	   res.redirect('/pagina.html');
           console.log("Datos almacenados correctamente")
           console.log(req.body);
         }
@@ -69,5 +78,5 @@ app.post("/validar", (req, res)=>{
 });
 
 app.listen(3000,(req,res)=>{
-    console.log("servidor escuchando el puerto http://localhost:3000");
+    console.log("servidor escuchando el puerto http://52.22.159.194:3000");
 });
