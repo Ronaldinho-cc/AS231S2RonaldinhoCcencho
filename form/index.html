@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body style="background-image: url('img/2.jpg');">
+    <div class="container">
+        <div class="form-container">
+            <h1 class="title">Bienvenidos</h1>
+            <img src="img/Logo-VG_Tpt02.png" alt="">
+            <div class="options">
+                <form action="/validar" onsubmit="return validarFormulario()" method="post">
+                    <div class="carrera">
+                        <label>
+                            <input id="carrera" type="radio" name="carrera" value="analisis_sistemas" required> Analisis de sistemas
+                        </label>
+                        <label>
+                            <input id="carrera" type="radio" name="carrera" value="produccion_agraria" required> Produccion Agraria
+                        </label>
+                    </div>
+                    <div class="questions">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Nombres" name="nombre" required> <br>
+                        <label for="apellido">Apellido </label>
+                        <input type="text" id="apellido" placeholder="Apellidos" name="apellido" required> <br>
+                        <label for="dni">N° Dni </label>
+                        <input type="text" id="dni" placeholder="N° Dni" name="dni" pattern="[0-9]{8}" required> <br>
+                        <label for="nacimiento">Fecha Nacimiento</label>
+                        <input type="text" id="nacimiento" name="nacimiento" placeholder="dd/mm/aaaa" required> <br>
+                        <label for="correo">Correo Electronico</label>
+                        <input type="email" id="correo" placeholder="correo" name="correo" required> <br>
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" placeholder="contraseña" required> 
+                        <input type="checkbox" onclick="mostrarContrasena()"> Mostrar Contraseña <br>          
+                        <br>
+                        <br>
+                        <label>     
+                            <input type="checkbox" id="aceptar-condiciones"> Aceptar la politica de privacidad de los Terminos y condiciones 
+                        </label> <br>
+                        <button type="submit" value="REGISTRARME" >Enviar</button>
+                    </div>
+                </form>
+                
+        </div>
+    </div>
+    <script src="js/validar.js"></script>
+</body>
+</html>
